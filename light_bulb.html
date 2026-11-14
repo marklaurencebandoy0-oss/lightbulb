@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light Bulb Switch</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 3 frames stacked: OFF -> START (warming up) -> ON -->
+    <div class="bg-bulb">
+        <img id="bulb_off" class="frame frame-off" src="src/bulb_off.jpg" alt="Bulb off">
+        <img id="bulb_start" class="frame frame-start" src="src/bulb_on1.png" alt="Bulb warming up">
+        <img id="bulb_on"  class="frame frame-on"  src="src/bulb_on.png"  alt="Bulb on">
+    </div>
+
+    <!-- Switch button -->
+    <div class="switch" id="switch" role="switch" aria-checked="false" tabindex="0">
+        <div class="btn"></div>
+        <span class="bulb_on_status">ON</span>
+        <span class="bulb_off_status">OFF</span>
+    </div>
+
+    <!-- Sounds -->
+    <audio id="sound_on"  src="src/switch_on.wav"  preload="auto"></audio>
+    <audio id="sound_start" src="src/light_start.wav" preload="auto"></audio>
+    <audio id="sound_off" src="src/switch_off.wav" preload="auto"></audio>
+    <audio id="light_hum" src="src/light_hum.wav"  preload="auto" loop></audio>
+
+    <script src="light.js"></script>
+</body>
+</html>
